@@ -1,0 +1,6 @@
+{
+  "name": "Klyverion Business Suite",
+  "description": "One Platform. Every Business Operation. Ecossistema ERP modular integrado ao WordPress — Fase 1: Fundação, Core, App Center, RBAC e Tema.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

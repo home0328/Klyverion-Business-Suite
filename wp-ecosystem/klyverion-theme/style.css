@@ -1,0 +1,110 @@
+/*
+Theme Name:   Klyverion Business Theme
+Theme URI:    https://klyverion.com/theme
+Author:       Klyverion Design Systems
+Description:  Camada de apresentação desacoplada para o Klyverion Business Suite. Contém exclusivamente design tokens, shell responsivo e suporte Light/Dark.
+Version:      1.0.0
+Requires at least: 6.4
+Requires PHP: 8.2
+License:      GPL-2.0-or-later
+Text Domain:  klyverion-theme
+*/
+
+:root {
+  --klyv-bg-canvas: #f8fafc;
+  --klyv-bg-surface: #ffffff;
+  --klyv-border-subtle: #e2e8f0;
+  --klyv-text-primary: #0f172a;
+  --klyv-text-muted: #475569;
+  --klyv-accent: #2563eb;
+}
+
+html.dark {
+  --klyv-bg-canvas: #020617;
+  --klyv-bg-surface: #0f172a;
+  --klyv-border-subtle: #1e293b;
+  --klyv-text-primary: #f8fafc;
+  --klyv-text-muted: #94a3b8;
+  --klyv-accent: #3b82f6;
+}
+
+.klyv-body {
+  margin: 0;
+  background: var(--klyv-bg-canvas);
+  color: var(--klyv-text-primary);
+  font-family: "Public Sans", system-ui, -apple-system, sans-serif;
+}
+
+.klyv-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.klyv-sidebar {
+  width: 260px;
+  border-right: 1px solid var(--klyv-border-subtle);
+  background: var(--klyv-bg-surface);
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.klyv-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--klyv-border-subtle);
+  margin-bottom: 1rem;
+}
+
+.klyv-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.klyv-topbar {
+  height: 56px;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--klyv-border-subtle);
+  background: var(--klyv-bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.klyv-content {
+  padding: 2rem;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.klyv-card {
+  background: var(--klyv-bg-surface);
+  border: 1px solid var(--klyv-border-subtle);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.klyv-btn-outline {
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--klyv-border-subtle);
+  background: transparent;
+  color: var(--klyv-text-primary);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+  .klyv-shell {
+    flex-direction: column;
+  }
+  .klyv-sidebar {
+    width: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--klyv-border-subtle);
+  }
+}
